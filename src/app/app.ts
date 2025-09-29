@@ -20,14 +20,10 @@ export class App implements OnInit {
   }
 
   public adivinhar(): void {
-    if (this.numeroDigitado < this.numeroSecreto)
-      this.dicaNumeroMaiorQue = this.numeroDigitado;
-    
+    if (this.numeroDigitado < this.numeroSecreto) this.dicaNumeroMaiorQue = this.numeroDigitado;
     else if (this.numeroDigitado > this.numeroSecreto)
       this.dicaNumeroMenorQue = this.numeroDigitado;
-
-    else
-      this.jogoEstaFinalizado = true;
+    else this.jogoEstaFinalizado = true;
   }
 
   public reiniciar(): void {
@@ -43,7 +39,7 @@ export class App implements OnInit {
   private obterNumeroSecreto() {
     const numeroAleatorio: number = Math.random() * 100;
 
-    const numeroSecreto = Math.floor(numeroAleatorio)
+    const numeroSecreto = Math.floor(numeroAleatorio);
 
     return numeroSecreto;
   }
